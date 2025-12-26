@@ -9,17 +9,17 @@ import Footer from './components/Footer/Footer'
 
 const App = () => {
   return (
-    <div className='app'>
       <>
         <Navbar />
+         <div className='app'>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/placeorder' element={<Placeorder />} />
         </Routes>
+        </div>
         <Footer />
       </>
-    </div>
   )
 }
 
