@@ -1,0 +1,235 @@
+/* ===== Cart Container ===== */
+.cart {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  color: #222;
+}
+
+.cart-items {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== Header Row ===== */
+.cart-items-title {
+  display: grid;
+  grid-template-columns: 80px 2fr 1fr 1fr 1fr 1fr;
+  font-weight: 600;
+  color: #555;
+  font-size: 14px;
+  align-items: center;
+}
+
+.cart-items-title p {
+  margin: 0;
+}
+
+.cart hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 16px 0;
+}
+
+/* ===== Cart Item Row ===== */
+.cart-item-row {
+  display: grid;
+  grid-template-columns: 80px 2fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  padding: 14px 0;
+  font-size: 14px;
+}
+
+.cart-item-row img {
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.cart-item-row p {
+  margin: 0;
+  color: #333;
+}
+
+/* ===== Remove Button ===== */
+.cart-item-row button {
+  background-color: transparent;
+  border: 1px solid #ef4444;
+  color: #ef4444;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.cart-item-row button:hover {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+/* ===== Empty Cart ===== */
+.cart-items > p {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  padding: 40px 0;
+}
+
+/* ===== Totals Section ===== */
+.cart-total {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.cart-total p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.cart-total strong {
+  color: #111;
+}
+
+.cart-discount {
+  color: #16a34a;
+}
+
+.cart-final {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+/* ===== Promo Code Section ===== */
+.cart-promo {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.promo-input {
+  width: 160px;          /* fixed small width */
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.promo-input:disabled {
+  background-color: #f3f4f6;
+  cursor: not-allowed;
+}
+
+.promo-apply,
+.promo-remove {
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+/* Apply Button */
+.promo-apply {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.promo-apply:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.promo-apply:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Remove Promo */
+.promo-remove {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.promo-remove:hover {
+  background-color: #e5e7eb;
+}
+
+/* Promo Message */
+.promo-message {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #374151;
+}
+
+/* ===== Footer / Checkout ===== */
+.cart-footer {
+  margin-top: 24px;
+  text-align: right;
+}
+
+.checkout-button {
+  background-color: #16a34a;
+  color: #ffffff;
+  border: none;
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Delivery and final payable styles */
+.delivery-charge {
+  color: #374151;
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+.payable-total {
+  font-size: 20px;
+  font-weight: 800;
+  margin-top: 8px;
+  color: #111827;
+}
+.checkout-button:hover:not(:disabled) {
+  background-color: #15803d;
+}
+
+.checkout-button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .cart-items-title,
+  .cart-item-row {
+    grid-template-columns: 60px 2fr 1fr;
+    row-gap: 8px;
+  }
+
+  .cart-items-title p:nth-child(n + 4),
+  .cart-item-row p:nth-child(n + 4),
+  .cart-item-row button {
+    display: none;
+  }
+
+  .cart-footer {
+    text-align: center;
+  }
+
+  .checkout-button {
+    width: 100%;
+  }
+  .promo-input {
+    width: 140px;        /* slightly smaller on mobile */
+  }
+}
