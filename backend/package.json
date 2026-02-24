@@ -1,11 +1,10 @@
 {
-<<<<<<< HEAD
   "name": "backend",
   "version": "1.0.0",
   "main": "server.js",
-  "type": "module",
+  "type":"module",
   "scripts": {
-    "server": "nodemon server.js"
+   "server": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
@@ -22,9 +21,5 @@
     "nodemon": "^3.1.11",
     "stripe": "^20.1.0",
     "validator": "^13.15.26"
-=======
-  "dependencies": {
-    "react-router-dom": "^7.10.1"
->>>>>>> 67c9d3d84ea7392daa5cee9144152a40f2df08bc
   }
 }

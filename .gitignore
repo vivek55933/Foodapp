@@ -1,4 +1,11 @@
 node_modules/
 uploads/
 .env
+<<<<<<< HEAD
 *.log
+=======
+.DS_Store
+*.log
+dist/
+build/
+>>>>>>> 67c9d3d84ea7392daa5cee9144152a40f2df08bc
